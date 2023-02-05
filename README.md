@@ -87,7 +87,7 @@ git clone https://github.com/mosy/nvim.git
  
  exit 
  
- nvim /usr/share/xsessions/dwm.desktop
+nvim /usr/share/xsessions/dwm.desktop
 [Desktop Entry]
 Encoding=UTF-8
 Name=dwm
