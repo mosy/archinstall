@@ -99,4 +99,12 @@ Type=XSession
 grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+#quadro 410
+sudo pacman -S linux-headers
+git clone https://aur.archlinux.org/nvidia-470xx-utils.git
+makepkg -si
+
+Programmer:
+sudo pacman -S texlive-most openscad xcircuit prusa-slicer arduino-cli
+
 
