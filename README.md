@@ -107,4 +107,6 @@ makepkg -si
 Programmer:
 sudo pacman -S texlive-most openscad xcircuit prusa-slicer arduino-cli
 
+# Thunar
+sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller
 
