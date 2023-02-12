@@ -27,7 +27,7 @@ locale-gen
 
 vim /etc/locale.conf
 LANG=en_US.UTF-8
-pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh
+pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller
 
 
 
@@ -104,9 +104,13 @@ sudo pacman -S linux-headers
 git clone https://aur.archlinux.org/nvidia-470xx-utils.git
 makepkg -si
 
-Programmer:
-sudo pacman -S texlive-most openscad xcircuit prusa-slicer arduino-cli
 
-# Thunar
-sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller
+
+
+# Printer
+git clone https://aur.archlinux.org/brother-dcp-l2530dw.git
+makepgk -si
+
+
+
 
