@@ -27,7 +27,7 @@ locale-gen
 
 vim /etc/locale.conf
 LANG=en_US.UTF-8
-pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller
+pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller alsa-utils
 
 
 
@@ -60,7 +60,9 @@ git clone https://github.com/mosy/nvim.git
  
  mkinitcpio -P
  
- passwd
+passwd
+grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
  
  useradd -m -G wheel,sudo,uucp username
  
@@ -81,25 +83,13 @@ git clone https://github.com/mosy/nvim.git
  make
  sudo make install
  
-  git clone https://aur.archlinux.org/google-chrome.git
-  
-  makepkg -si
+git clone https://aur.archlinux.org/google-chrome.git
+makepkg -si
  
- exit 
- 
-nvim /usr/share/xsessions/dwm.desktop
-[Desktop Entry]
-Encoding=UTF-8
-Name=dwm
-Comment=Dynamic window manager
-Exec=dwm
-Icon=dwm
-Type=XSession
 
-grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
 
-#quadro 410
+
+#quadro 410 bare jobb pc
 sudo pacman -S linux-headers
 git clone https://aur.archlinux.org/nvidia-470xx-utils.git
 makepkg -si
