@@ -23,7 +23,7 @@ mount /dev/root_partition /mnt
 ```
 mount --mkdir /dev/efi_system_partition /mnt/boot
 ```
-```
+```bash
 swapon /dev/swap_partition
 ```
 ```
