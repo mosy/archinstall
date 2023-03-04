@@ -104,8 +104,8 @@ makepgk -si
 Norske taster
 sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf
 Legg inn følgende
-<html>
-      <head>
+
+```
     
 # Written by systemd-localed(8), read by systemd-localed and Xorg. It's
 # probably wise not to edit this file manually. Use localectl(1) to
@@ -119,10 +119,7 @@ Section "InputClass"
         Option "XkbOptions" "caps:ctrl_modifier"
         Option "XkbOptions" "nodeadkeys"
 EndSection
-  </head>
-    </html>
-
-
+```
 
 
 
