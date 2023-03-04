@@ -131,10 +131,12 @@ useradd -m -G wheel,sudo,uucp username
  ```
  make
  sudo make install i alle disse
-
+```
 git clone https://aur.archlinux.org/google-chrome.git
+```
+```
 makepkg -si
- 
+ ```
 
 
 
@@ -147,11 +149,15 @@ makepkg -si
 
 
 # Printer
+```
 git clone https://aur.archlinux.org/brother-dcp-l2530dw.git
+```
 makepgk -si
 
 Norske taster
+```
 sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf
+```
 Legg inn følgende
 
 ```
