@@ -1,10 +1,13 @@
 # archinstall
-
+```
 ls /sys/firmware/efi/efivars
-
+```
+```
 timedatectl status
+```
+```
 fdisk -l
-
+```
 mkfs.ext4 /dev/root_partition
 mkswap /dev/swap_partition
 mkfs.fat -F 32 /dev/efi_system_partition
