@@ -27,7 +27,7 @@ locale-gen
 
 vim /etc/locale.conf
 LANG=en_US.UTF-8
-pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller alsa-utils maim tesseract tesseract-land-eng python python-pyserial moserial
+pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller alsa-utils maim tesseract tesseract-land-eng python python-pyserial moserial xclip
 
 
 
@@ -100,6 +100,28 @@ makepkg -si
 # Printer
 git clone https://aur.archlinux.org/brother-dcp-l2530dw.git
 makepgk -si
+
+Norske taster
+sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf
+Legg inn følgende
+<html>
+      <head>
+    
+# Written by systemd-localed(8), read by systemd-localed and Xorg. It's
+# probably wise not to edit this file manually. Use localectl(1) to
+# instruct systemd-localed to update it.
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "us"
+        Option "XkbModel" "pc105"
+        Option "XkbVariant" "altgr-intl"
+        Option "XkbOptions" "caps:ctrl_modifier"
+        Option "XkbOptions" "nodeadkeys"
+EndSection
+  </head>
+    </html>
+
 
 
 
