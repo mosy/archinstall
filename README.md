@@ -51,7 +51,7 @@ nvim /etc/locale.gen
 locale-gen
 ```
 ```
-pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller alsa-utils maim tesseract tesseract-land-eng python python-pyserial moserial xclip
+pacman -S git base-develn networkmanager neovim xorg-server xorg lxdm lxde intel-ucode sudo grub efibootmgr openssh cups cups-pdf texlive-most openscad xcircuit prusa-slicer arduino-cli thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler libgsf file-roller alsa-utils maim tesseract tesseract-land-eng python python-pyserial moserial xclip vlc kicad kicad-library kicad-library-3d
 ```
 Rediger
 ```
